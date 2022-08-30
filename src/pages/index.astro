@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Bluebutton from '../components/Bluebutton.astro';
+import ImageBlockLeft from '../components/ImageBlockLeft.astro';
+import ImageBlockRight from '../components/ImageBlockRight.astro';
+---
+
+<Layout title="The Bonus Group">
+	<main>
+		<div class="container mx-auto p-6 pb-0 pt-12">
+			<div class="grid grid-cols-1 xl:grid-cols-2 space-x-4 text-white">
+				<div class="text-left">
+					<div class="flex items-center space-x-2">
+						<hr class="w-12 border-2 border-primaryBlue"> <p class="text-lg text-greyText" style="font-family: poppinsBold">Family owned for 60 years.</p>
+					</div>	
+					<p class="text-6xl pb-4" style="font-family: poppinsBold">The Bonus Group.</p>
+					<p class="text-md text-greyText" style="font-family: poppins">The Bonus Group is one of the largest independant electrical businesses in the
+						Yorkshire area. Constantly diversifying in order to specialise in different aspects of supply including design & manufacture, whilst striving
+						for constant improvement in every aspect of the business.</p><br>
+					<p class="text-lg text-greyText" style="font-family: poppins">Recently launching ecommerce websites to capture the domestic lighting and appliances market, we are 
+						commited to growth.</p>
+					<div class="flex pt-4 space-x-4">
+						<Button
+						href="test"
+						title="Explore our companies">
+						</Button>
+						<Bluebutton
+						href="/"
+						title="Contact">
+						</Bluebutton>
+					</div>
+					<div class="sm:flex pt-12 sm:space-x-12 text-center space-y-4 sm:space-y-0 sm:h-96">
+						<div class="bg-sectionLight w-full p-6 text-3xl sm:rounded-t-2xl" style="font-family: poppinsBold;">£25M+ <br> turnover<br><span class="flex justify-center pt-6"><img src="./public/pound.png"></span></div>
+						<div class="bg-sectionLight w-full p-6 text-3xl sm:rounded-t-2xl" style="font-family: poppinsBold;">8+ <br> companies<br><span class="flex justify-center pt-6"><img src="./public/building.png"></span></div>
+						<div class="bg-sectionLight w-full p-6 text-3xl sm:rounded-t-2xl" style="font-family: poppinsBold;">100+ <br> staff<br><span class="flex justify-center pt-6"><img src="./public/person.png"></span></div>
+					</div>
+				</div>
+				<div class="hidden sm:block w-full">
+					<img src="./public/home.svg" class="ml-12 p-4">
+				</div>
+			</div>
+		</div>
+		<div class="bg-sectionLight">
+			<div class="container mx-auto text-white p-4">
+				<ImageBlockLeft
+					img="./public/office.jpeg"
+					subtitle="How we started."
+					title="Our history"
+					body="The Bonus Group have just reached the milestone of 60 years trading, starting out as a small electrical wholesaler evolving into a multifaceted operation over many sites with many years of experience.">
+				</ImageBlockLeft>
+				<br>
+				<ImageBlockRight
+				img="./public/desk.jpeg"
+				subtitle="Our industry."
+				title="What do we do?"
+				body="The Bonus Group have just reached the milestone of 60 years trading, starting out as a small electrical wholesaler evolving into a multifaceted operation over many sites with many years of experience.">
+				</ImageBlockRight>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+	}
+
+	h1 {
+		margin: 2rem 0;
+	}
+
+
+	.text-gradient  {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			background-position-y: 0%;
+		}
+		50% {
+			background-position-y: 80%;
+		}
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		background: #4f39fa;
+		padding: 1rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+	}
+
+	.instructions code {
+		font-size: 0.875em;
+		border: 0.1em solid var(--color-border);
+		border-radius: 4px;
+		padding: 0.15em 0.25em;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>

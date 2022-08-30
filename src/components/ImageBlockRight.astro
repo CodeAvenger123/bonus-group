@@ -1,0 +1,22 @@
+---
+export interface Props {
+	img: string;
+	subtitle: string;
+    title: string;
+    body: string;
+}
+
+const { img, title, subtitle, body } = Astro.props;
+---
+
+<div class="container grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+    <p class="block sm:hidden "><img src={img} class="border-b-8 border-primaryBlue"></p>
+    <div class="bg-sectionDark p-6 border-l-8 border-primaryBlue text-left">
+        <p class="text-lg text-greyText" style="font-family: poppinsBold;">{subtitle}</p>
+        <p class="text-5xl" style="font-family: poppinsBold;">{title}</p><br>
+        <p class="text-lg text-greyText" style="font-family: poppins;">{body}</p>
+    </div>
+    <div>
+        <p class="hidden sm:block "><img src={img} class="border-b-8 border-primaryBlue"></p>
+    </div>
+</div>

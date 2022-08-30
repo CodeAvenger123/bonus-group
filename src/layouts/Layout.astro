@@ -1,0 +1,108 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="bg-sectionDark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<div class="justify-between flex flex-col h-screen">
+		<div class="bg-sectionDark text-gray-300 font-bold flex justify-between items-center container mx-auto p-4">
+			<img src="./public/logo.png" class="h-12">
+			<div class="space-x-4 mr-6 text-greyText">
+				<a href="/">Home</a>
+				<a href="/">Our Companies</a>
+				<a href="/">Jobs</a>
+				<a href="/">Our Commitments</a>
+				<a href="/">Contact</a>
+				<a href="/">Email us</a>
+			</div>
+		</div>
+		<div class="">
+			<body>
+				<slot />
+			</body>
+		</div>
+		<footer class="text-center sm:text-left bg-sectionDark text-white p-2 mt-auto text-greyText" style="font-family: poppins;">
+			<div class="grid grid-cols-1 sm:grid-cols-4 p-4 items-center space-y-4 sm:space-y-0">
+				<div><img src="./public/logo.png" class="h-12 mx-auto"></div>
+				<div class="space-y-2">
+					<p class="font-bold">Legal</p>
+					<p class="text-xs">© Bonus Group 2021</p>
+					<p class="text-xs">Phone Number: 01482 373737</p>
+					<p class="text-xs">Company Number: 01191139</p>
+				</div>
+				<div>
+					<p class="font-bold">Resources</p>
+					<p><a href="/" class="text-xs">Jobs</a></p>
+					<p><a href="/" class="text-xs">Important documents</a></p>
+				</div>
+				<div class="space-y-2">
+					<p class="font-bold">Registered Office</p>
+					<p class="text-xs" >Unit 1</p>
+					<p class="text-xs">Connaught Road</p>
+					<p class="text-xs">Kingswood</p>
+					<p class="text-xs">Hull</p>
+					<p class="text-xs">HU7 3AP</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+</html>
+<style>
+	:root {
+		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
+		--font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+
+		--color-text: hsl(12, 5%, 4%);
+		--color-bg: hsl(10, 21%, 95%);
+		--color-border: hsl(17, 24%, 90%);
+	}
+
+	html {
+		font-family: system-ui, sans-serif;
+		font-size: var(--font-size-base);
+		color: var(--color-text);
+		background-color: var(--color-bg);
+	}
+
+
+	:global(h1) {
+		font-size: var(--font-size-xl);
+	}
+
+	:global(h2) {
+		font-size: var(--font-size-lg);
+	}
+
+	:global(code) {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+
+	@font-face {
+		font-family: poppinsBold;
+		src: url(./public/fonts/Poppins-black.ttf);
+	}
+
+	@font-face {
+		font-family: poppins;
+		src: url(./public/fonts/Poppins-Regular.ttf);
+	}
+
+	@font-face {
+		font-family: poppinsMedium;
+		src: url(./public/fonts/Poppins-Medium.ttf);
+	}
+</style>

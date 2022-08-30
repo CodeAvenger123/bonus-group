@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+---
+<Layout title="Test">
+    <main>
+        <html>
+            <head>
+              <title>My Homepage</title>
+            </head>
+            <body>
+                <div class="container mx-auto text-center">
+                    <h1>Welcome to my website!</h1>
+                    <div class="w-3/6 mx-auto pb-2 flex space-x-2">
+                        <Button
+                            href="/"
+                            title="Go Back">
+                        </Button>
+                        <Button
+                            href="/"
+                            title="Go Back">
+                    </Button>
+                    </div>
+                </div>
+            </body>
+          </html>
+    </main> 
+</Layout>
+
