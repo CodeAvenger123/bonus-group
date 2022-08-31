@@ -7,11 +7,11 @@ export interface Props {
 const { href, title } = Astro.props;
 ---
 
-<div class="bg-sectionLight text-white text-lg p-4 rounded hover:bg-blue-400" style="font-family: poppinsMedium">
-	<a href={href}>
+<a href={href} class="w-full">
+	<div class="bg-sectionLight text-white text-lg p-4 rounded hover:bg-blue-400 text-center" style="font-family: poppinsMedium">
 		<span>
 			{title}
 			<!-- <span>&rarr;</span> -->
 		</span>
-	</a>
-</div>
+	</div>
+</a>
